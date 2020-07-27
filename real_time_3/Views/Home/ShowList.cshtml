@@ -1,0 +1,19 @@
+﻿@model real_time_3.Models.Form;
+@{
+    ViewData["Title"] = "ShowList";
+}
+
+<h2>ShowList</h2>
+
+@foreach (Form form in ViewBag.list)
+{
+    <div class="">
+        <p>@form.Name</p>
+        <p>@form.Surname</p>
+        <p>@form.Email</p>
+        <p>@form.Text</p>   
+        <a href="delete?id=@form.Email">Smazat</a>
+    </div>
+<br/>
+}
+

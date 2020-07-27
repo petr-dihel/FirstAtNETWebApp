@@ -1,0 +1,36 @@
+﻿@model real_time_3.Models.Form;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+
+    <h1 class="info">@ViewBag.message</h1>
+
+    @Html.BeginForm(){
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Name)
+        @Html.TextBoxFor(model => model.Name)
+        @Html.ValidationMessageFor(model => model.Name)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Surname)
+        @Html.TextBoxFor(model => model.Surname)
+        @Html.ValidationMessageFor(model => model.Surname)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Email)
+        @Html.TextBoxFor(model => model.Email)
+        @Html.ValidationMessageFor(model => model.Email)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Text)
+        @Html.TextAreaFor(model => model.Text)
+        @Html.ValidationMessageFor(model => model.Text)
+    </div>
+
+    <button type="submit" value="send">Odeslat</button>
+</div>
